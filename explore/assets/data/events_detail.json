@@ -1,0 +1,39 @@
+{
+  "id": 3,
+  "title": "Gala muzyki filmowej",
+  "price": "free",
+  "img": "assets/images/a08680e3cc55d9d937a3490b188eef3c.jpg",
+  "place": "Hala widowiskowo-sportowa Spodek \nal. Korfantego 35, Katowice",
+  "main_artist": ["Cerekwicka", "Ziółko", "Talarczyk", "Sztor", "Chór"],
+  "date": "03.09.2024",
+  "hour": "18.00",
+  "artist": [
+    "Katarzyna Cerekwicka",
+    "Mateusz Ziółko",
+    "Robert Talarczyk – prowadzenie",
+    "Maciej Sztor – dyrygent",
+    "Jarosław Wolanin – przygotowanie Chóru",
+    "Mateusz Kokot – animacje",
+    "Katarzyna Kroczek-Wasińska – animacje",
+    "Wojciech Kukuczka – animacje",
+    "Witold Suchoń – animacje",
+    "Tomasz Olszewski – wizualizacje",
+    "Orkiestra Symfoniczna Filharmonii Śląskiej",
+    "Chór Filharmonii Śląskiej"
+  ],
+  "program": [
+    "John Williams – Star Wars",
+    "John Williams – Szczęki",
+    "John Williams – Harry Potter",
+    "James Horner – Titanic",
+    "Hans Zimmer – Batman vs Superman",
+    "Hans Zimmer – Incepcja",
+    "Hans Zimmer – Piraci z Karaibów",
+    "Harry Gregson-Williams – Opowieści z Narnii",
+    "John Powell – Jak Wytresować Smoka",
+    "David Arnold – James Bond",
+    "Ryszard Strauss – Odyseja Kosmiczna",
+    "James Newton Howard – Igrzyska Śmierci",
+    "Angelo Badalamenti – Twin Peaks"
+  ]
+}

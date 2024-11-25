@@ -4,7 +4,7 @@ class EventVerticalItem extends StatelessWidget {
   final String id;
   final String imgUrl;
   final String title;
-  final String subtitle;
+  final String place;
   final String date;
   final bool favorite;
 
@@ -13,7 +13,7 @@ class EventVerticalItem extends StatelessWidget {
       required this.id,
       required this.imgUrl,
       required this.title,
-      required this.subtitle,
+      required this.place,
       required this.date,
       this.favorite = false})
       : super(key: key);

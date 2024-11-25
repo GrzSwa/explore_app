@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'event_card.dart';
 
-class EventVerticalItem extends StatelessWidget {
+class EventVerticalItem extends StatefulWidget {
   final String id;
   final String imgUrl;
   final String title;
@@ -19,21 +20,63 @@ class EventVerticalItem extends StatelessWidget {
       : super(key: key);
 
   @override
+  State<EventVerticalItem> createState() => _EventVerticalItemState();
+}
+
+class _EventVerticalItemState extends State<EventVerticalItem> {
+  late bool _isFavorite;
+
+  @override
+  void initState() {
+    super.initState();
+    _isFavorite = widget.favorite;
+  }
+
+  void _toggleFavorite() {
+    setState(() {
+      _isFavorite = !_isFavorite;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 100,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.tealAccent),
-      child: const Card(
-        child: ListTile(
-          leading: FlutterLogo(size: 72.0),
-          title: Text('Three-line ListTile'),
-          subtitle: Text('A sufficiently long subtitle warrants three lines.'),
-          trailing: Icon(Icons.more_vert),
-          isThreeLine: true,
-        ),
-      ),
-    );
+        width: double.infinity,
+        height: 100,
+        margin: const EdgeInsets.only(bottom: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: EventCard(
+          image: ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(10),
+              bottomLeft: Radius.circular(10),
+            ),
+            child: Image.asset(
+              widget.imgUrl,
+              width: 117,
+              height: 114,
+              fit: BoxFit.cover,
+            ),
+          ),
+          title: widget.title,
+          subtitle: widget.place,
+          date: widget.date,
+          icons: [
+            GestureDetector(
+              onTap: _toggleFavorite,
+              child: Icon(
+                _isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                color: _isFavorite
+                    ? Color.fromRGBO(13, 222, 174, 1)
+                    : Colors.white,
+              ),
+            ),
+            Icon(
+              Icons.subdirectory_arrow_left,
+              color:
+                  _isFavorite ? Color.fromRGBO(13, 222, 174, 1) : Colors.white,
+            ),
+          ],
+        ));
   }
 }

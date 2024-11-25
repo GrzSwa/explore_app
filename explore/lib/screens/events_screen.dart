@@ -31,6 +31,7 @@ class _EventsScreenState extends State<EventsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromRGBO(239, 239, 239, 1),
         appBar: TopBar(
             title: "Wydarzenia",
             onBackPressed: () {

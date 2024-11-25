@@ -9,11 +9,16 @@ class EventHorizontalItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      height: 100,
+      width: 300,
+      height: 244,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.teal),
-      child: Text(imgUrl),
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.teal,
+        image: DecorationImage(
+          image: AssetImage(imgUrl),
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }

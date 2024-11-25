@@ -21,6 +21,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Color.fromRGBO(239, 239, 239, 1),
       title: Text(title),
       leading: showBackButton
           ? IconButton(

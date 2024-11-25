@@ -19,8 +19,6 @@ class AppRoutesConfig {
         return MaterialPageRoute(builder: (_) => const EventsScreen());
       case explore:
         return MaterialPageRoute(builder: (_) => const ExploreScreen());
-      case readMore:
-        return MaterialPageRoute(builder: (_) => const ReadMoreScreen());
       case addToCalendar:
         return MaterialPageRoute(builder: (_) => const AddToCalendarScreen());
       default:

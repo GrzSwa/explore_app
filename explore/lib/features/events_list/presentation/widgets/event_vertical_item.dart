@@ -1,3 +1,4 @@
+import 'package:explore/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'event_card.dart';
 
@@ -40,43 +41,50 @@ class _EventVerticalItemState extends State<EventVerticalItem> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: double.infinity,
-        height: 100,
-        margin: const EdgeInsets.only(bottom: 10),
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: EventCard(
-          image: ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(10),
-              bottomLeft: Radius.circular(10),
+    return GestureDetector(
+      onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ReadMoreScreen(id: widget.id))),
+      child: Container(
+          width: double.infinity,
+          height: 100,
+          margin: const EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: EventCard(
+            image: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
+              ),
+              child: Image.asset(
+                widget.imgUrl,
+                width: 117,
+                height: 114,
+                fit: BoxFit.cover,
+              ),
             ),
-            child: Image.asset(
-              widget.imgUrl,
-              width: 117,
-              height: 114,
-              fit: BoxFit.cover,
-            ),
-          ),
-          title: widget.title,
-          subtitle: widget.place,
-          date: widget.date,
-          icons: [
-            GestureDetector(
-              onTap: _toggleFavorite,
-              child: Icon(
-                _isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+            title: widget.title,
+            subtitle: widget.place,
+            date: widget.date,
+            icons: [
+              GestureDetector(
+                onTap: _toggleFavorite,
+                child: Icon(
+                  _isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                  color: _isFavorite
+                      ? Color.fromRGBO(13, 222, 174, 1)
+                      : Colors.white,
+                ),
+              ),
+              Icon(
+                Icons.subdirectory_arrow_left,
                 color: _isFavorite
                     ? Color.fromRGBO(13, 222, 174, 1)
                     : Colors.white,
               ),
-            ),
-            Icon(
-              Icons.subdirectory_arrow_left,
-              color:
-                  _isFavorite ? Color.fromRGBO(13, 222, 174, 1) : Colors.white,
-            ),
-          ],
-        ));
+            ],
+          )),
+    );
   }
 }

@@ -12,6 +12,7 @@ class EventHorizontalList extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20),
       height: 340,
+      width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

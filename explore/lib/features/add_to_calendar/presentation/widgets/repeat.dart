@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Repeat extends StatelessWidget {
@@ -26,8 +27,9 @@ class Repeat extends StatelessWidget {
                     width: 5,
                   ),
                   Icon(
-                    Icons.arrow_upward_outlined,
+                    CupertinoIcons.chevron_up_chevron_down,
                     color: Color.fromRGBO(157, 157, 156, 1),
+                    size: 20,
                   )
                 ],
               )

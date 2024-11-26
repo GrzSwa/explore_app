@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
@@ -22,20 +23,29 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Color.fromRGBO(239, 239, 239, 1),
-      title: Text(title),
+      title: Text(
+        title,
+        style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+      ),
       leading: showBackButton
           ? IconButton(
-              icon: const Icon(Icons.arrow_back),
+              iconSize: 21,
+              icon: const Icon(
+                CupertinoIcons.arrow_left,
+                color: Color.fromRGBO(0, 102, 177, 1),
+              ),
               onPressed: onBackPressed,
             )
           : null,
       actions: [
         IconButton(
-          icon: const Icon(Icons.search),
+          iconSize: 21,
+          icon: const Icon(CupertinoIcons.search),
           onPressed: onSearchPressed,
         ),
         IconButton(
-          icon: const Icon(Icons.filter_list),
+          iconSize: 21,
+          icon: const Icon(CupertinoIcons.slider_horizontal_3),
           onPressed: onFilterPressed,
         ),
       ],

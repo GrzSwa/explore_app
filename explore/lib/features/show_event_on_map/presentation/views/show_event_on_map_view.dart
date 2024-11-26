@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ShowEventOnMapView extends StatelessWidget {
@@ -15,7 +16,7 @@ class ShowEventOnMapView extends StatelessWidget {
           width: 60,
           height: 60,
           child: const Icon(
-            Icons.navigation_outlined,
+            CupertinoIcons.location,
             size: 31,
             color: Color.fromRGBO(13, 222, 174, 1),
           ),

@@ -1,4 +1,5 @@
 import 'package:explore/features/event_filtering/presentation/views/view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EventFilterScreen extends StatelessWidget {
@@ -11,7 +12,10 @@ class EventFilterScreen extends StatelessWidget {
           title: const Text("Filtruj"),
           leading: IconButton(
               onPressed: () => {Navigator.pop(context)},
-              icon: const Icon(Icons.cancel)),
+              icon: const Icon(
+                CupertinoIcons.xmark,
+                color: Color.fromRGBO(0, 102, 177, 1),
+              )),
         ),
         body: SingleChildScrollView(
           child: Padding(

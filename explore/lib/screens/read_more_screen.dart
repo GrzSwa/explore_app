@@ -7,6 +7,7 @@ import 'package:explore/features/event_detail/presentation/widgets/widgets.dart'
 import 'package:explore/features/share_event/presentation/views/share_event_views.dart';
 import 'package:explore/features/show_event_on_map/presentation/views/views.dart';
 import 'package:explore/features/show_event_website/presentation/views/views.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ReadMoreScreen extends StatefulWidget {
@@ -38,8 +39,12 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(
-              onPressed: () => {Navigator.pop(context)},
-              icon: const Icon(Icons.arrow_back)),
+            onPressed: () => {Navigator.pop(context)},
+            icon: const Icon(
+              CupertinoIcons.arrow_left,
+              color: Color.fromRGBO(0, 102, 177, 1),
+            ),
+          ),
         ),
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),

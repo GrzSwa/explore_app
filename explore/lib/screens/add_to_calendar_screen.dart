@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../features/add_to_calendar/presentation/widgets/widgets.dart';
 
@@ -13,10 +14,16 @@ class AddToCalendarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Kalendarz imprez"),
+          title: const Text(
+            "Kalendarz imprez",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+          ),
           leading: IconButton(
               onPressed: () => {Navigator.pop(context)},
-              icon: const Icon(Icons.cancel)),
+              icon: const Icon(
+                CupertinoIcons.xmark,
+                color: Color.fromRGBO(0, 102, 177, 1),
+              )),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),

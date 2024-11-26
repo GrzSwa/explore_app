@@ -1,4 +1,5 @@
 import 'package:explore/screens/screens.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AddToCalendarView extends StatelessWidget {
@@ -30,7 +31,7 @@ class AddToCalendarView extends StatelessWidget {
             width: 60,
             height: 60,
             child: const Icon(
-              Icons.calendar_month_outlined,
+              CupertinoIcons.calendar_badge_plus,
               size: 31,
               color: Color.fromRGBO(13, 222, 174, 1),
             ),

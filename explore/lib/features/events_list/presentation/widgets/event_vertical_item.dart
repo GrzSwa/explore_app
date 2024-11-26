@@ -1,3 +1,4 @@
+import 'package:explore/features/events_list/presentation/widgets/widgets.dart';
 import 'package:explore/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'event_card.dart';
@@ -77,12 +78,12 @@ class _EventVerticalItemState extends State<EventVerticalItem> {
                       : Colors.white,
                 ),
               ),
-              Icon(
-                Icons.subdirectory_arrow_left,
+              CornerIcon(
                 color: _isFavorite
                     ? Color.fromRGBO(13, 222, 174, 1)
                     : Colors.white,
-              ),
+                size: 12,
+              )
             ],
           )),
     );

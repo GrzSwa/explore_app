@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FilterAccordion extends StatefulWidget {
@@ -24,9 +25,9 @@ class _FilterAccordionState extends State<FilterAccordion> {
           Expanded(
               flex: 1,
               child: IconButton(
-                icon: const Icon(Icons.arrow_drop_down),
+                icon: const Icon(CupertinoIcons.chevron_down),
                 color: const Color.fromRGBO(0, 102, 177, 1),
-                iconSize: 40,
+                iconSize: 20,
                 onPressed: () {
                   setState(() {
                     widget.isExpanded = !widget.isExpanded;

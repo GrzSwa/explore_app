@@ -13,11 +13,8 @@ class EventHorizontalItem extends StatelessWidget {
       height: 244,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.teal,
         image: DecorationImage(
-          image: AssetImage(imgUrl),
-          fit: BoxFit.cover,
-        ),
+            image: AssetImage(imgUrl), fit: BoxFit.cover, scale: 0.5),
       ),
     );
   }

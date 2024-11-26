@@ -1,4 +1,5 @@
 import 'package:explore/config/routes/routes.dart';
+import 'package:explore/features/event_search/presentation/views/views.dart';
 import 'package:explore/features/events_list/data/data_source/data_source.dart';
 import 'package:explore/features/events_list/data/repository/events_repository.dart';
 import 'package:explore/features/events_list/domain/logic/events_logic.dart';
@@ -15,6 +16,7 @@ class EventsScreen extends StatefulWidget {
 
 class _EventsScreenState extends State<EventsScreen> {
   late final EventsLogic _eventsLogic;
+  bool _showSearch = false;
 
   @override
   void initState() {
@@ -28,10 +30,16 @@ class _EventsScreenState extends State<EventsScreen> {
     setState(() {});
   }
 
+  void showSearchField() {
+    setState(() {
+      _showSearch = !_showSearch;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(239, 239, 239, 1),
+        backgroundColor: const Color.fromRGBO(239, 239, 239, 1),
         appBar: TopBar(
             title: "Wydarzenia",
             onBackPressed: () {
@@ -42,7 +50,7 @@ class _EventsScreenState extends State<EventsScreen> {
               );
             },
             onSearchPressed: () {
-              print('Search pressed');
+              showSearchField();
             },
             onFilterPressed: () {
               print('Filter pressed');
@@ -53,6 +61,12 @@ class _EventsScreenState extends State<EventsScreen> {
               )
             : ListView(
                 children: [
+                  _showSearch
+                      ? const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: SearchFieldView(),
+                        )
+                      : SizedBox(),
                   EventHorizontalList(
                       eventsItems: _eventsLogic.eventsHorizontal),
                   ...EventVerticalList(eventsItems: _eventsLogic.eventsVertical)

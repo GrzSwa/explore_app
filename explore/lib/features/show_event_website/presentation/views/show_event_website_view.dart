@@ -21,7 +21,7 @@ class ShowEventWebsiteView extends StatelessWidget {
           ),
         ),
         const Text(
-          "Dodaj do\nkalendarza",
+          "Strona\nwww",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 12,

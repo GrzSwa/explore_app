@@ -4,6 +4,7 @@ import 'package:explore/features/events_list/data/data_source/data_source.dart';
 import 'package:explore/features/events_list/data/repository/events_repository.dart';
 import 'package:explore/features/events_list/domain/logic/events_logic.dart';
 import 'package:explore/features/events_list/presentation/views/views.dart';
+import 'package:explore/screens/screens.dart';
 import 'package:explore/shared/presentation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,8 @@ class _EventsScreenState extends State<EventsScreen> {
               showSearchField();
             },
             onFilterPressed: () {
-              print('Filter pressed');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => EventFilterScreen()));
             }),
         body: _eventsLogic.isLoading
             ? const Center(
@@ -66,7 +68,7 @@ class _EventsScreenState extends State<EventsScreen> {
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: SearchFieldView(),
                         )
-                      : SizedBox(),
+                      : const SizedBox(),
                   EventHorizontalList(
                       eventsItems: _eventsLogic.eventsHorizontal),
                   ...EventVerticalList(eventsItems: _eventsLogic.eventsVertical)

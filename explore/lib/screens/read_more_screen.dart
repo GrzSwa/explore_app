@@ -1,8 +1,12 @@
+import 'package:explore/features/add_to_calendar/presentation/views/views.dart';
 import 'package:explore/features/event_detail/data/data_source/data_source.dart';
 import 'package:explore/features/event_detail/data/repository/repository.dart';
 import 'package:explore/features/event_detail/domain/logic/logic.dart';
 import 'package:explore/features/event_detail/presentation/views/views.dart';
 import 'package:explore/features/event_detail/presentation/widgets/widgets.dart';
+import 'package:explore/features/share_event/presentation/views/share_event_views.dart';
+import 'package:explore/features/show_event_on_map/presentation/views/views.dart';
+import 'package:explore/features/show_event_website/presentation/views/views.dart';
 import 'package:flutter/material.dart';
 
 class ReadMoreScreen extends StatefulWidget {
@@ -56,10 +60,22 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                     const SizedBox(height: 15),
                     EventBanner(imgUrl: _eventDetailLogic.eventDetail.img),
                     const SizedBox(height: 15),
-                    Container(
+                    SizedBox(
                       height: 100,
                       width: double.infinity,
-                      color: Colors.amberAccent,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          AddToCalendarView(
+                            id: _eventDetailLogic.eventDetail.id.toString(),
+                            title: _eventDetailLogic.eventDetail.title,
+                            place: _eventDetailLogic.eventDetail.place,
+                          ),
+                          const ShareEventView(),
+                          const ShowEventOnMapView(),
+                          const ShowEventWebsiteView()
+                        ],
+                      ),
                     ),
                     const SizedBox(height: 15),
                     EventProgramList(

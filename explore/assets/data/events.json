@@ -2,49 +2,56 @@
   {
     "id": 1,
     "title": "Benefis artysty",
-    "img": "assets/images/8da833b667ec41b42c94d1198244f210.jpg",
+    "banner": "assets/images/8da833b667ec41b42c94d1198244f210.jpg",
+    "thumbnail": "assets/images/8da833b667ec41b42c94d1198244f210_thumbnail.jpg",
     "place": "Warszawa - Martynka",
     "date": "25.11.2024"
   },
   {
     "id": 2,
     "title": "XXXIII Festiwal ARS Cameralis",
-    "img": "assets/images/726411cc0e8f62acaedcbcb390279708.jpg",
+    "banner": "assets/images/726411cc0e8f62acaedcbcb390279708.jpg",
+    "thumbnail": "assets/images/726411cc0e8f62acaedcbcb390279708_thumbnail.jpg",
     "place": "Warszawa",
     "date": "25.11.2024"
   },
   {
     "id": 3,
     "title": "Gala muzyki filmowej",
-    "img": "assets/images/a08680e3cc55d9d937a3490b188eef3c.jpg",
+    "banner": "assets/images/a08680e3cc55d9d937a3490b188eef3c.jpg",
+    "thumbnail": "assets/images/a08680e3cc55d9d937a3490b188eef3c_thumbnail.jpg",
     "place": "Spodek, Katowice",
     "date": "03.09.2024"
   },
   {
     "id": 4,
     "title": "Stanisław Bober fotografia",
-    "img": "assets/images/d2a85feeab9ab1d5dae894a0d679686d.jpg",
+    "banner": "assets/images/d2a85feeab9ab1d5dae894a0d679686d.jpg",
+    "thumbnail": "assets/images/d2a85feeab9ab1d5dae894a0d679686d_thumbnail.jpg",
     "place": "Miejski ośrodek Kultury, Katowice",
     "date": "23.09-12.10.2024"
   },
   {
     "id": 5,
     "title": "Dziedzictwo kultury a proces inwestycyjny",
-    "img": "assets/images/c7ec2bb68f47056d1ddba49994abbdd1.jpg",
-    "place": "Warszawa - Martynka",
+    "banner": "assets/images/c7ec2bb68f47056d1ddba49994abbdd1.jpg",
+    "thumbnail": "assets/images/c7ec2bb68f47056d1ddba49994abbdd1_thumbnail.jpg",
+    "place": "Muzeum Śląskie, Katowice",
     "date": "23.09-12.10.2024"
   },
   {
     "id": 6,
     "title": "Gala muzyki filmowej",
-    "img": "assets/images/1ea7357e159d79672d37c67a6524b1a2.jpg",
+    "banner": "assets/images/1ea7357e159d79672d37c67a6524b1a2.jpg",
+    "thumbnail": "assets/images/1ea7357e159d79672d37c67a6524b1a2_thumbnail.jpg",
     "place": "Młodzieżowy Dom Kultury, Bielsko-Biała",
     "date": "12.10.2024"
   },
   {
     "id": 7,
     "title": "Gala muzyki filmowej",
-    "img": "assets/images/a3366604727a0dba247dc854635b6228.jpg",
+    "banner": "assets/images/a3366604727a0dba247dc854635b6228.jpg",
+    "thumbnail": "assets/images/a3366604727a0dba247dc854635b6228_thumbnail.jpg",
     "place": "Młodzieżowy Dom Kultury, Bielsko-Biała",
     "date": "12.10.2024"
   }

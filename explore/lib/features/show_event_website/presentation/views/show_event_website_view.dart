@@ -1,3 +1,5 @@
+import 'package:explore/shared/constants/enums/enums.dart';
+import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class ShowEventWebsiteView extends StatelessWidget {
@@ -14,10 +16,9 @@ class ShowEventWebsiteView extends StatelessWidget {
           ),
           width: 60,
           height: 60,
-          child: const Icon(
-            Icons.web_asset_outlined,
-            size: 31,
-            color: Color.fromRGBO(13, 222, 174, 1),
+          child: const Align(
+            alignment: Alignment(0.1, 0.0),
+            child: IconsApp(icons: SvgIconsEnum.globe_outlined),
           ),
         ),
         const Text(

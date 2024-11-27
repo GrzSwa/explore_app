@@ -8,53 +8,35 @@ class EventFilterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           title: const Text("Filtruj"),
           leading: IconButton(
               onPressed: () => {Navigator.pop(context)},
-              icon: const Icon(
+              icon: Icon(
                 CupertinoIcons.xmark,
-                color: Color.fromRGBO(0, 102, 177, 1),
+                color: Theme.of(context).colorScheme.primary,
               )),
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                EventFilteringView(),
-                SizedBox(height: 40),
-                SearchEventByDistance(),
-                SizedBox(height: 40),
+                const EventFilteringView(),
+                const SizedBox(height: 40),
+                const SearchEventByDistance(),
+                const SizedBox(height: 40),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "Wyczyść",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              color: Color.fromRGBO(0, 102, 177, 1),
-                            ),
-                          )),
+                          onPressed: () {}, child: const Text("Wyczyść")),
                       ElevatedButton(
                         onPressed: () {},
-                        style: ButtonStyle(
-                            foregroundColor:
-                                WidgetStateProperty.all(Colors.white),
-                            backgroundColor: WidgetStateProperty.all(
-                                const Color.fromRGBO(0, 102, 177, 1))),
-                        child: const Text(
-                          "Pokaż wyniki (24)",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
+                        child: const Text("Pokaż wyniki (24)"),
                       )
                     ],
                   ),

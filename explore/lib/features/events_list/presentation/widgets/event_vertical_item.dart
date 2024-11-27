@@ -53,6 +53,7 @@ class _EventVerticalItemState extends State<EventVerticalItem> {
           margin: const EdgeInsets.only(bottom: 10),
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: EventCard(
+            //TODO: Zrobić, żeby ten widget nie korzystał z EventCard
             image: ClipRRect(
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(10),

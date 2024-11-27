@@ -21,7 +21,7 @@ class EventHorizontalList extends StatelessWidget {
           padding: EdgeInsets.only(right: 20, left: index == 0 ? 20 : 0),
           child: EventHorizontalItem(
               id: eventsItems[index].id.toString(),
-              imgUrl: eventsItems[index].img),
+              imgUrl: eventsItems[index].thumbnail),
         ),
       ),
     );

@@ -1,3 +1,5 @@
+import 'package:explore/shared/constants/enums/enums.dart';
+import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class EventPriceInfo extends StatelessWidget {
@@ -8,11 +10,9 @@ class EventPriceInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          isFree! ? Icons.free_breakfast : Icons.attach_money,
-          color: const Color.fromRGBO(77, 76, 76, 1),
-          size: 21,
-        ),
+        isFree!
+            ? const IconsApp(icons: SvgIconsEnum.event_free)
+            : const IconsApp(icons: SvgIconsEnum.event_paid),
         const SizedBox(width: 10),
         Text(
           isFree! ? 'Wydarzenie bezpłatne' : 'Wydarzenie płatne',

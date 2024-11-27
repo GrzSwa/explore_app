@@ -1,3 +1,5 @@
+import 'package:explore/shared/constants/enums/enums.dart';
+import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +17,9 @@ class ShowEventOnMapView extends StatelessWidget {
           ),
           width: 60,
           height: 60,
-          child: const Icon(
-            CupertinoIcons.location,
-            size: 31,
-            color: Color.fromRGBO(13, 222, 174, 1),
+          child: const Align(
+            alignment: Alignment(0.1, 0.0),
+            child: IconsApp(icons: SvgIconsEnum.navigate_outlined),
           ),
         ),
         const Text(

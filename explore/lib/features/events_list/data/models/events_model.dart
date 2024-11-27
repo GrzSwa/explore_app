@@ -1,14 +1,16 @@
 class EventsModel {
   final int id;
   final String title;
-  final String img;
+  final String banner;
+  final String thumbnail;
   final String place;
   final String date;
 
   EventsModel(
       {required this.id,
       required this.title,
-      required this.img,
+      required this.banner,
+      required this.thumbnail,
       required this.place,
       required this.date});
 
@@ -16,7 +18,8 @@ class EventsModel {
     return EventsModel(
         id: json['id'],
         title: json['title'],
-        img: json['img'],
+        banner: json['banner'],
+        thumbnail: json['thumbnail'],
         place: json['place'],
         date: json['date']);
   }

@@ -1,5 +1,6 @@
+import 'package:explore/shared/constants/enums/svg_icons_enums.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigation extends StatelessWidget {
   final int currentIndex;
@@ -16,35 +17,35 @@ class BottomNavigation extends StatelessWidget {
     return SizedBox(
       height: 80,
       child: BottomNavigationBar(
-          backgroundColor: Color.fromRGBO(228, 236, 237, 1),
-          currentIndex: currentIndex,
-          onTap: onTap,
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(currentIndex == 0
-                    ? CupertinoIcons.house_fill
-                    : CupertinoIcons.home),
-                label: 'Śłąskie'),
-            BottomNavigationBarItem(
-                icon: Icon(currentIndex == 1
-                    ? Icons.newspaper
-                    : Icons.newspaper_outlined),
-                label: 'Aktualności'),
-            BottomNavigationBarItem(
-                icon: Icon(currentIndex == 2
-                    ? Icons.calendar_month
-                    : Icons.calendar_month_outlined),
-                label: 'wydarzenia'),
-            BottomNavigationBarItem(
-                icon: Icon(currentIndex == 3
-                    ? Icons.pin_drop
-                    : Icons.pin_drop_outlined),
-                label: 'Eksploruj'),
-          ],
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color.fromRGBO(77, 76, 76, 1),
-          unselectedItemColor: Color.fromRGBO(77, 76, 76, 1),
-          iconSize: 28),
+        backgroundColor: Color.fromRGBO(228, 236, 237, 1),
+        currentIndex: currentIndex,
+        onTap: onTap,
+        items: [
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(currentIndex == 0
+                  ? SvgIconsEnum.home_filled.toString()
+                  : SvgIconsEnum.home_outlined.toString()),
+              label: 'Śłąskie'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(currentIndex == 1
+                  ? SvgIconsEnum.news_filled.toString()
+                  : SvgIconsEnum.news_outlined.toString()),
+              label: 'Aktualności'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(currentIndex == 2
+                  ? SvgIconsEnum.event_filled.toString()
+                  : SvgIconsEnum.event_outlined.toString()),
+              label: 'wydarzenia'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(currentIndex == 3
+                  ? SvgIconsEnum.explore_filled.toString()
+                  : SvgIconsEnum.explore_outlined.toString()),
+              label: 'Eksploruj'),
+        ],
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Color.fromRGBO(77, 76, 76, 1),
+        unselectedItemColor: Color.fromRGBO(77, 76, 76, 1),
+      ),
     );
   }
 }

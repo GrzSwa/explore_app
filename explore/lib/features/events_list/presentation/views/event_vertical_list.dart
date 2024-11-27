@@ -11,7 +11,7 @@ class EventVerticalList {
     return eventsItems
         .map((item) => EventVerticalItem(
               id: item.id.toString(),
-              imgUrl: item.img,
+              imgUrl: item.thumbnail,
               title: item.title,
               date: item.date,
               place: item.place,

@@ -40,7 +40,7 @@ class _EventsScreenState extends State<EventsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(239, 239, 239, 1),
+        backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: TopBar(
             title: "Wydarzenia",
             onBackPressed: () {
@@ -66,7 +66,8 @@ class _EventsScreenState extends State<EventsScreen> {
                   _showSearch
                       ? const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: SearchFieldView(),
+                          child:
+                              SearchFieldView(), //TODO: Ustawić autofocus, żeby od razu klawaitura się pokazywała
                         )
                       : const SizedBox(),
                   EventHorizontalList(

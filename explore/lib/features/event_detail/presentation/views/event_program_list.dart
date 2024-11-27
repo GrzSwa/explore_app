@@ -18,7 +18,7 @@ class EventProgramList extends StatelessWidget {
             style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
           ),
           ...items.map((item) => Text(
-                '\u2022 $item',
+                '\t\t\u2022 $item',
                 style:
                     const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
               ))

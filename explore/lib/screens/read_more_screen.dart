@@ -7,6 +7,7 @@ import 'package:explore/features/event_detail/presentation/widgets/widgets.dart'
 import 'package:explore/features/share_event/presentation/views/share_event_views.dart';
 import 'package:explore/features/show_event_on_map/presentation/views/views.dart';
 import 'package:explore/features/show_event_website/presentation/views/views.dart';
+import 'package:explore/shared/constants/enums/enums.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -98,9 +99,9 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                     const SizedBox(height: 20),
                     const Row(
                       children: [
-                        EventSocialMedia(icon: Icons.facebook_outlined),
-                        SizedBox(width: 10),
-                        EventSocialMedia(icon: Icons.camera_alt_outlined)
+                        EventSocialMedia(icon: SvgIconsEnum.fb_outlined),
+                        SizedBox(width: 20),
+                        EventSocialMedia(icon: SvgIconsEnum.instagram_outlined)
                       ],
                     ),
                     const SizedBox(height: 20),

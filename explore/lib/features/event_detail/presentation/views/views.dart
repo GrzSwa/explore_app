@@ -1,3 +1,3 @@
-export 'event_header.dart';
-export 'event_banner.dart';
-export 'event_program_list.dart';
+export 'event_header_view.dart';
+export 'event_banner_view.dart';
+export 'event_program_list_view.dart';

@@ -2,8 +2,8 @@ import 'package:explore/shared/constants/enums/enums.dart';
 import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class ShareEventView extends StatelessWidget {
-  const ShareEventView({Key? key}) : super(key: key);
+class ShareEventIconView extends StatelessWidget {
+  const ShareEventIconView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

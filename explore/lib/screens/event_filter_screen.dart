@@ -1,5 +1,5 @@
 import 'package:explore/features/event_filtering/presentation/views/view.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class EventFilterScreen extends StatelessWidget {
@@ -8,16 +8,8 @@ class EventFilterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        appBar: AppBar(
-          title: const Text("Filtruj"),
-          leading: IconButton(
-              onPressed: () => {Navigator.pop(context)},
-              icon: Icon(
-                CupertinoIcons.xmark,
-                color: Theme.of(context).colorScheme.primary,
-              )),
-        ),
+        backgroundColor: const Color.fromRGBO(239, 239, 239, 1),
+        appBar: const TopBar(title: "Filtruj", exitButton: true),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -25,19 +17,15 @@ class EventFilterScreen extends StatelessWidget {
               children: [
                 const EventFilteringView(),
                 const SizedBox(height: 40),
-                const SearchEventByDistance(),
+                const SearchEventByDistanceView(),
                 const SizedBox(height: 40),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      TextButton(
-                          onPressed: () {}, child: const Text("Wyczyść")),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: const Text("Pokaż wyniki (24)"),
-                      )
+                      SecondaryButton(text: "Wyczyść", onPressed: () {}),
+                      PrimaryButton(text: "Pokaż wyniki (24)", onPressed: () {})
                     ],
                   ),
                 )

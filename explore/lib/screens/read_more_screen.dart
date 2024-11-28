@@ -4,7 +4,7 @@ import 'package:explore/features/event_detail/data/repository/repository.dart';
 import 'package:explore/features/event_detail/domain/logic/logic.dart';
 import 'package:explore/features/event_detail/presentation/views/views.dart';
 import 'package:explore/features/event_detail/presentation/widgets/widgets.dart';
-import 'package:explore/features/share_event/presentation/views/share_event_views.dart';
+import 'package:explore/features/share_event/presentation/views/share_event_icon_view.dart';
 import 'package:explore/features/show_event_on_map/presentation/views/views.dart';
 import 'package:explore/features/show_event_website/presentation/views/views.dart';
 import 'package:explore/shared/constants/enums/enums.dart';
@@ -56,7 +56,7 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                     child: CircularProgressIndicator(),
                   )
                 : Column(children: [
-                    EventHeader(
+                    EventHeaderView(
                       title: _eventDetailLogic.eventDetail.title,
                       artist: _eventDetailLogic.eventDetail.mainArtist,
                       date: _eventDetailLogic.eventDetail.date,
@@ -64,7 +64,7 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                       location: _eventDetailLogic.eventDetail.place,
                     ),
                     const SizedBox(height: 15),
-                    EventBanner(imgUrl: _eventDetailLogic.eventDetail.img),
+                    EventBannerView(imgUrl: _eventDetailLogic.eventDetail.img),
                     const SizedBox(height: 15),
                     SizedBox(
                       height: 100,
@@ -72,22 +72,22 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          AddToCalendarView(
+                          AddToCalendarIconView(
                             id: _eventDetailLogic.eventDetail.id.toString(),
                             title: _eventDetailLogic.eventDetail.title,
                             place: _eventDetailLogic.eventDetail.place,
                           ),
-                          const ShareEventView(),
-                          const ShowEventOnMapView(),
-                          const ShowEventWebsiteView()
+                          const ShareEventIconView(),
+                          const ShowEventOnMapIconView(),
+                          const ShowEventWebsiteIconView()
                         ],
                       ),
                     ),
                     const SizedBox(height: 15),
-                    EventProgramList(
+                    EventProgramListView(
                         label: "Wykonawcy:",
                         items: _eventDetailLogic.eventDetail.artist),
-                    EventProgramList(
+                    EventProgramListView(
                         label: "Program:",
                         items: _eventDetailLogic.eventDetail.program),
                     const SizedBox(height: 20),

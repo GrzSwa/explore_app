@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class EventBanner extends StatelessWidget {
+class EventBannerView extends StatelessWidget {
   final String imgUrl;
-  const EventBanner({Key? key, required this.imgUrl}) : super(key: key);
+  const EventBannerView({Key? key, required this.imgUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

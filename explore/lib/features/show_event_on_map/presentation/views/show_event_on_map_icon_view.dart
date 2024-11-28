@@ -3,8 +3,8 @@ import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ShowEventOnMapView extends StatelessWidget {
-  const ShowEventOnMapView({Key? key}) : super(key: key);
+class ShowEventOnMapIconView extends StatelessWidget {
+  const ShowEventOnMapIconView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

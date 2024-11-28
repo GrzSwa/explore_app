@@ -2,9 +2,9 @@ import 'package:explore/features/events_list/data/models/events_model.dart';
 import 'package:flutter/material.dart';
 import '../widgets/widgets.dart';
 
-class EventHorizontalList extends StatelessWidget {
+class EventHorizontalListView extends StatelessWidget {
   final List<EventsModel> eventsItems;
-  const EventHorizontalList({Key? key, required this.eventsItems})
+  const EventHorizontalListView({Key? key, required this.eventsItems})
       : super(key: key);
 
   @override

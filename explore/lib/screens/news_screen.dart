@@ -1,4 +1,3 @@
-import 'package:explore/config/routes/routes.dart';
 import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -7,23 +6,11 @@ class NewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+    return const Scaffold(
+      backgroundColor: Color.fromRGBO(239, 239, 239, 1),
       appBar: TopBar(
-          title: "Aktualności",
-          onBackPressed: () {
-            Navigator.pushNamedAndRemoveUntil(
-              context,
-              AppRoutesConfig.home,
-              (route) => false,
-            );
-          },
-          onSearchPressed: () {
-            print('Search pressed');
-          },
-          onFilterPressed: () {
-            print('Filter pressed');
-          }),
+        title: "Aktualności",
+      ),
       body: Center(
         child: Text("News"),
       ),

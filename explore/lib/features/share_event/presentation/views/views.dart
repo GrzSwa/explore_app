@@ -1,1 +1,1 @@
-export 'share_event_views.dart';
+export 'share_event_icon_view.dart';

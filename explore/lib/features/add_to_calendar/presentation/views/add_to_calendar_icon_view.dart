@@ -3,11 +3,11 @@ import 'package:explore/shared/constants/enums/enums.dart';
 import 'package:explore/shared/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class AddToCalendarView extends StatelessWidget {
+class AddToCalendarIconView extends StatelessWidget {
   final String id;
   final String title;
   final String place;
-  const AddToCalendarView(
+  const AddToCalendarIconView(
       {Key? key, required this.id, required this.title, required this.place})
       : super(key: key);
 

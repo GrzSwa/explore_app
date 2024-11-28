@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class EventProgramList extends StatelessWidget {
+class EventProgramListView extends StatelessWidget {
   final String label;
   final List<String> items;
-  const EventProgramList({Key? key, required this.label, required this.items})
+  const EventProgramListView(
+      {Key? key, required this.label, required this.items})
       : super(key: key);
 
   @override

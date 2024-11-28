@@ -1,4 +1,3 @@
-import 'package:explore/config/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:explore/shared/presentation/widgets/widgets.dart';
 
@@ -7,22 +6,11 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      backgroundColor: Color.fromRGBO(239, 239, 239, 1),
       appBar: TopBar(
-          title: "Aktualności",
-          onBackPressed: () {
-            Navigator.pushNamedAndRemoveUntil(
-              context,
-              AppRoutesConfig.home,
-              (route) => false,
-            );
-          },
-          onSearchPressed: () {
-            print('Search pressed');
-          },
-          onFilterPressed: () {
-            print('Filter pressed');
-          }),
+        title: "Eksploruj",
+      ),
       body: Center(
         child: Text("Explore"),
       ),

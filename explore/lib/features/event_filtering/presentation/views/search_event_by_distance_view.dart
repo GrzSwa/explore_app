@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SearchEventByDistance extends StatefulWidget {
-  const SearchEventByDistance({Key? key}) : super(key: key);
+class SearchEventByDistanceView extends StatefulWidget {
+  const SearchEventByDistanceView({Key? key}) : super(key: key);
 
   @override
   _SearchEventByDistanceState createState() => _SearchEventByDistanceState();
 }
 
-class _SearchEventByDistanceState extends State<SearchEventByDistance> {
+class _SearchEventByDistanceState extends State<SearchEventByDistanceView> {
   double _currentValue = 50;
 
   @override
@@ -19,9 +19,7 @@ class _SearchEventByDistanceState extends State<SearchEventByDistance> {
           children: [
             Text("Szukaj w odległości od swojej lokalizacji"),
             SizedBox(height: 10),
-            Divider(
-              height: 1,
-            ),
+            Divider(height: 1, color: Color.fromRGBO(77, 76, 76, 0.07)),
           ],
         ),
         Padding(

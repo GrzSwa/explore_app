@@ -2,10 +2,10 @@ import 'package:explore/features/events_list/data/models/events_model.dart';
 
 import '../widgets/widgets.dart';
 
-class EventVerticalList {
+class EventVerticalListView {
   List<EventsModel> eventsItems = [];
 
-  EventVerticalList({required this.eventsItems});
+  EventVerticalListView({required this.eventsItems});
 
   List<EventVerticalItem> getItems() {
     return eventsItems

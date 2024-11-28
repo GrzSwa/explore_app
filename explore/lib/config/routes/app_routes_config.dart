@@ -6,8 +6,6 @@ class AppRoutesConfig {
   static const String news = '/news';
   static const String events = '/events';
   static const String explore = '/explore';
-  static const String readMore = '/readMore';
-  static const String addToCalendar = '/addToCalendar';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {

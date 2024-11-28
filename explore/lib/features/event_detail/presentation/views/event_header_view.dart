@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../widgets/widgets.dart';
 
-class EventHeader extends StatelessWidget {
+class EventHeaderView extends StatelessWidget {
   final String title;
   final List<String> artist;
   final String date;
   final String hour;
   final String location;
-  const EventHeader(
+  const EventHeaderView(
       {Key? key,
       required this.title,
       required this.artist,
